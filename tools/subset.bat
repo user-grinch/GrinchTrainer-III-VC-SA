@@ -1,0 +1,1 @@
+pyftsubset title.ttf --unicodes-file="title.txt" --output-file="titleout.ttf"

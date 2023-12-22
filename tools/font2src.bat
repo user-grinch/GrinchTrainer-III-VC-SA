@@ -1,0 +1,1 @@
+binary_to_compressed_c.exe title.ttf title > title.cpp

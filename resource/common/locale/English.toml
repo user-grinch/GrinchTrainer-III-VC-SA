@@ -822,6 +822,7 @@ WhiteScanlines = "White scanlines"
 [Weapon]
 Ammo = "Ammo"
 CurrentWeapon = "Current: %s"
+Customize = "Customize"
 DropAll = "Remove all"
 DropCurrent = "Remove current"
 DropWeapon = "Drop weapon"

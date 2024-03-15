@@ -1,56 +1,38 @@
 ##############################################################################
-# Weapon Data
-# Example,
-# 
-# [Category Name]
-# "name" = "id"
+# Weapon Names
+# Example:  ID = "Name"
 ##############################################################################
 
-[Melee]
-Brassknuckle = "259"
-Screwdriver = "260"
-Golfclub = "261"
-Nitestick = "262"
-Knifecur = "263"
-Bat = "264"
-Hammer = "265"
-Cleaver = "266"
-Machete = "267"
-Katana = "268"
-Chainsaw = "269"
-
-[Projectile]
-Grenade = "270"
-Teargas = "271"
-Molotov = "272"
-"Rocket launcher" = "287"
-"Flame thrower" = "288"
-
-[Shotgun]
-Buddyshot = "279"
-Shotgspa = "278"
-
-["Machine gun"]
-M4 = "280"
-Tec9 = "281"
-Uzi = "282"
-Colt45 = "274"
-
-[Sniper]
-Sniper = "285"
-Laser = "286"
-
-[Heavy]
-Ingramsl = "283"
-Mp5lng = "284"
-Minigun = "290"
-M60 = "289"
-
-[Misc]
-Cellphone = "258"
-Python = "275"
-Ruger = "276"
-Chromegun = "277"
-Bomb = "291"
-Camera = "292"
-Fingers = "293"
+259 = "Brassknuckle"
+260 = "Screwdriver"
+261 = "Golfclub"
+262 = "Nitestick"
+263 = "Knifecur"
+264 = "Bat"
+265 = "Hammer"
+266 = "Cleaver"
+267 = "Machete"
+268 = "Katana"
+269 = "Chainsaw"
+270 = "Grenade"
+271 = "Teargas"
+272 = "Molotov"
+287 = "Rocket launcher"
+288 = "Flame thrower"
+279 = "Buddyshot"
+278 = "Shotgspa"
+280 = "M4"
+281 = "Tec9"
+282 = "Uzi"
+274 = "Colt45"
+285 = "Sniper"
+286 = "Laser"
+283 = "Ingramsl"
+284 = "Mp5lng"
+290 = "Minigun"
+289 = "M60"
+275 = "Python"
+276 = "Ruger"
+277 = "Chromegun"
+291 = "Bomb"
+292 = "Camera"

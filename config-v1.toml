@@ -1,0 +1,26 @@
+##########################################################################
+#  
+#        Online Configuration file for GrinchTrainerIII-VC-SA
+#
+##########################################################################
+
+##########################################################################
+# The main table, this applies to all GrinchTrainer versions
+##########################################################################
+
+[MAIN]
+AllowNonStableBuilds = true
+BlockedMods = ["samp.dll", "samp.asi", "vcmp-proxy.dll", "vcmp-proxy.asi", "vcmp.asi", "vcmp.dll"]
+ClientsEnabled = true
+EnableLogging = true
+ExceptionLogging = true
+MinimumVersion = 1.0
+UpdateRegistry = true
+UnsupportedMods = ["CheatMenuIII.asi", "CheatMenuVC.asi", "CheatMenuSA.asi", "gtaRenderHook.asi"]
+
+
+##########################################################################
+# Versions specific tables, applies to that version only
+##########################################################################
+[1.0]
+ClientEnabled = true

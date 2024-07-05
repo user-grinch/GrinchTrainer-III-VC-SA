@@ -4,7 +4,7 @@
 
 A trainer Grand Theft Auto III, VC & SA enabling a much more easier & amusing gameplay with cheats. This is **NOT** intended for use in multiplayer, I won't be responsible for any form of bans. Use it at your own risk!
 
-Press <kbd>Left Ctrl</kbd> + <kbd>T</kbd> to open the trainer.
+Press <kbd>Left Ctrl</kbd> + <kbd>T</kbd> (on keyboard) or <kbd>GamePadFaceLeft</kbd> + <kbd>GamePadFaceDown</kbd> (on consoles - check keymappings section) to open the trainer.
 
 Get stable binaries from [here](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/releases). Beta binaries are available at the discord server.
 
@@ -25,6 +25,131 @@ If you have those mentioned versions installed, use the installer [here](https:/
 2. Download [**GrinchTrainerSA/VC/III.7z**](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/releases) and extract everything in game root directory (NOT MODLOADER). The **GrinchTrainer** folder & **.asi** file must be placed in the same place.
 3. Install [SilentPatch](https://gtaforums.com/topic/669045-silentpatch/) (For GTA III don't install the ddraw.dll component)
 4. Install [D3D8to9 wrapper](https://github.com/crosire/d3d8to9/releases) (For III & VC) 
+</details>
+
+<details>
+<summary>Gamepad Key Mappings</summary>
+
+1. **GamepadStart**
+   - Xbox: Menu
+   - Switch: + (Plus)
+   - PS: Options
+
+2. **GamepadBack**
+   - Xbox: View
+   - Switch: - (Minus)
+   - PS: Share
+
+3. **GamepadFaceLeft**
+   - Xbox: X
+   - Switch: Y
+   - PS: Square
+
+4. **GamepadFaceRight**
+   - Xbox: B
+   - Switch: A
+   - PS: Circle
+
+5. **GamepadFaceUp**
+   - Xbox: Y
+   - Switch: X
+   - PS: Triangle
+
+6. **GamepadFaceDown**
+   - Xbox: A
+   - Switch: B
+   - PS: Cross
+
+7. **GamepadDpadLeft**
+   - Xbox: D-pad Left
+   - Switch: D-pad Left
+   - PS: D-pad Left
+
+8. **GamepadDpadRight**
+   - Xbox: D-pad Right
+   - Switch: D-pad Right
+   - PS: D-pad Right
+
+9. **GamepadDpadUp**
+   - Xbox: D-pad Up
+   - Switch: D-pad Up
+   - PS: D-pad Up
+
+10. **GamepadDpadDown**
+    - Xbox: D-pad Down
+    - Switch: D-pad Down
+    - PS: D-pad Down
+
+11. **GamepadL1**
+    - Xbox: L Bumper
+    - Switch: L
+    - PS: L1
+
+12. **GamepadR1**
+    - Xbox: R Bumper
+    - Switch: R
+    - PS: R1
+
+13. **GamepadL2**
+    - Xbox: L Trigger
+    - Switch: ZL
+    - PS: L2
+
+14. **GamepadR2**
+    - Xbox: R Trigger
+    - Switch: ZR
+    - PS: R2
+
+15. **GamepadL3**
+    - Xbox: L Stick (click)
+    - Switch: L3
+    - PS: L3
+
+16. **GamepadR3**
+    - Xbox: R Stick (click)
+    - Switch: R3
+    - PS: R3
+
+17. **GamepadLStickLeft**
+    - Xbox: Left Analog Stick Left
+    - Switch: Left Analog Stick Left
+    - PS: [Analog] Move Window (in Windowing mode)
+
+18. **GamepadLStickRight**
+    - Xbox: Left Analog Stick Right
+    - Switch: Left Analog Stick Right
+    - PS: [Analog] Move Window (in Windowing mode)
+
+19. **GamepadLStickUp**
+    - Xbox: Left Analog Stick Up
+    - Switch: Left Analog Stick Up
+    - PS: [Analog] Move Window (in Windowing mode)
+
+20. **GamepadLStickDown**
+    - Xbox: Left Analog Stick Down
+    - Switch: Left Analog Stick Down
+    - PS: [Analog] Move Window (in Windowing mode)
+
+21. **GamepadRStickLeft**
+    - Xbox: Right Analog Stick Left
+    - Switch: Right Analog Stick Left
+    - PS: [Analog]
+
+22. **GamepadRStickRight**
+    - Xbox: Right Analog Stick Right
+    - Switch: Right Analog Stick Right
+    - PS: [Analog]
+
+23. **GamepadRStickUp**
+    - Xbox: Right Analog Stick Up
+    - Switch: Right Analog Stick Up
+    - PS: [Analog]
+
+24. **GamepadRStickDown**
+    - Xbox: Right Analog Stick Down
+    - Switch: Right Analog Stick Down
+    - PS: [Analog]
+
 </details>
 
 ## Incompatible Mods

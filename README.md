@@ -133,7 +133,7 @@ Press <kbd>Left Ctrl</kbd> + <kbd>T</kbd> (on keyboard) or <kbd>GamePadFaceLeft<
 
 Get stable binaries from [here](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/releases). Beta binaries are available at the discord server.
 
-[![Discord Banner 2](https://discordapp.com/api/guilds/689515979847237649/widget.png?style=banner2)](https://discord.com/invite/ZzW7kmf)
+[![Discord Banner 2](https://discordapp.com/api/guilds/689515979847237649/widget.png?style=banner2)](https://discord.gg/AduJVdyqCD)
 
 ## Installation
 Only these versions of the game is supported. I highly recommand installing the menu on a fresh, non-modded game first.

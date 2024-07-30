@@ -206,6 +206,6 @@ You can either open a issue here or directly contact me on discord (Recommended)
 
 The translations are loaded from `GrinchTrainerXX/locale/*.toml` files. Make a copy of the `English.toml` file and translate the texts there to your language. Rename the file to `your_language.toml` and make a pull request. 
 
-If you're language isn't supported ( Appears `???` in the menu. Check [here](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/tree/master/tools/subset/in.txt) for supported languages), open a [issue](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/issues) asking for support.
+If you're language isn't supported ( Appears `???` in the menu. Check [here](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/tree/master/tools/in.txt) for supported languages), open a [issue](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/issues) asking for support.
 
 All credits are given in Menu/ About tab.

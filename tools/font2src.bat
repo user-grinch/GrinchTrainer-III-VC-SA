@@ -1,1 +1,1 @@
-binary_to_compressed_c.exe -base85 title.ttf title > title.cpp
+binary_to_compressed_c.exe -base85 out.ttf out > out.cpp

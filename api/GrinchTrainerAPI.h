@@ -1,5 +1,5 @@
 #pragma once
-#define TAPI_VERSION 1.1
+#define TAPI_VERSION 1.2
 typedef void (*T_FUNC)(void* value);
 
 enum TReturnCode {
@@ -33,8 +33,14 @@ extern "C" {
     // Draws space between widgets ImGui::Spacing
     DLL_WRAPPER TReturnCode TAPI_Spacing(float spacing);
 
-    // Draws a simple ImGui::Checkbox widget. Callback is called when widget state changes
+    // Draws ImGui::Buttons, Button2, Button3 are horizontally stacked buttons
+    DLL_WRAPPER TReturnCode TAPI_Button(const char* label, T_FUNC callback);
+    DLL_WRAPPER TReturnCode TAPI_Button2(const char* btn1, const char* btn2, T_FUNC callback1, T_FUNC callback2);
+    DLL_WRAPPER TReturnCode TAPI_Button3(const char* btn1, const char* btn2, const char* btn3, T_FUNC callback1, T_FUNC callback2, T_FUNC callback3);
+
+    // Draws a simple ImGui::Checkbox widget. Callback is called when widget state changes, Checkbox2 is horzontally stacked checkboxes
     DLL_WRAPPER TReturnCode TAPI_Checkbox(const char* label, bool* v, T_FUNC callback);
+    DLL_WRAPPER TReturnCode TAPI_Checkbox2(const char* checkbox1, const char* checkbox2, bool* v1, bool* v2, T_FUNC callback1, T_FUNC callback2);
 
     // Draws 1/2/3 ImGui::InputInt/InputFloat/SliderInt/SliderFloat widget. 
     // Callback is called when the value changes

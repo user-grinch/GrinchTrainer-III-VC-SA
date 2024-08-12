@@ -1,5 +1,5 @@
 #pragma once
-#define TAPI_VERSION 1.2
+#define TAPI_VERSION 13000
 typedef void (*T_FUNC)(void* value);
 
 enum TReturnCode {
@@ -20,11 +20,11 @@ enum TReturnCode {
 #ifdef __cplusplus
 extern "C" {
 #endif
-    DLL_WRAPPER float TAPI_GetAPIVersion();
-    DLL_WRAPPER float TAPI_GetTrainerVersion();
+    DLL_WRAPPER int TAPI_GetAPIVersion();
+    DLL_WRAPPER int TAPI_GetTrainerVersion();
 
     // Returns true when a successful connection is established. Call rest of the widget apis inside Init()..Close()
-    DLL_WRAPPER TReturnCode TAPI_InitConnect(const char* modname, float minVersion);
+    DLL_WRAPPER TReturnCode TAPI_InitConnect(const char* modname, int minVersion);
     DLL_WRAPPER TReturnCode TAPI_CloseConnect();
 
     // Clears all previosly registered widgets, useful if you're reloading/ unloading your modification

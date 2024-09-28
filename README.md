@@ -152,16 +152,7 @@ If you have those mentioned versions installed, use the installer [here](https:/
 4. Install [D3D8to9 wrapper](https://github.com/crosire/d3d8to9/releases) (For III & VC) 
 </details>
 
-## Incompatible Mods
-### GTA SA
-1. **ENB/ SA_DirectX 2.0** 
-2. **MSI Afterburner**  **FIX:**  Enable Stealth mode in rivatuner
-3. **GTA Underground**
-
-### GTA III
-1. SilentPatch **ddraw.dll** component.  **FIX:**  Delete ddraw.dll file for now
-
-Let me know if you mind more.
+Check out the [Compatibility List](https://docs.google.com/document/d/1BrDlFQ_w25AOx8mMJe0PQkuOpJL4LezXMS6TlUpS5XU/edit?usp=sharing)
 
 ## Things to do on crash
 1. Delete the `GrinchTrainerXX.toml` config file and try again.

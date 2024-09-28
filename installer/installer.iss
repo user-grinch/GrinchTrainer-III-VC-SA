@@ -7,14 +7,14 @@
 #define AppURL "https://github.com/user-grinch/GrinchTrainer-III-VC-SA"
 #define OutputDir "."
 
-#define GrinchTrainer = "https://github.com/user-grinch/GrinchTrainer-III-VC-SA/releases/download/"
-#define UAL32 = "https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/Win32-latest"
-#define D3D8to9Wrapper = "https://github.com/user-grinch/ImGuiRedux/releases/download/Win64-latest/d3d8.zip"
-#define SilentPatchIII = "https://silent.rockstarvision.com/uploads/SilentPatchIII.zip"
-#define SilentPatchVC = "https://silent.rockstarvision.com/uploads/SilentPatchVC.zip"
-#define SilentPatchSA = "https://silent.rockstarvision.com/uploads/SilentPatchSA.zip"
-#define Redist = "https://aka.ms/vs/17/release/vc_redist.x86.exe"
-#define DX9 = "https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe"
+#define GrinchTrainerLocalFolder="GrinchTrainerLocal"
+#define UAL32="path\to\UAL32.zip"
+#define D3D8to9Wrapper="path\to\d3d8.zip"
+#define SilentPatchIII="path\to\SilentPatchIII.zip"
+#define SilentPatchVC="path\to\SilentPatchVC.zip"
+#define SilentPatchSA="path\to\SilentPatchSA.zip"
+#define Redist="path\to\vc_redist.x86.exe"
+#define DX9="path\to\dxwebsetup.exe"
 
 [Setup]
 AppId={{511AFCDA-FD5E-491C-A1B7-22BAC8F93711}}
@@ -23,7 +23,7 @@ AppVersion={#AppVersion}
 AppVerName={#AppName} {#AppVersion} by {#AppPublisher}
 AppPublisher={#AppPublisher}
 AppPublisherURL={#AppURL}
-AppCopyright=Copyright (c) 2019-2023, {#AppPublisher}
+AppCopyright=Copyright (c) 2019-2025, {#AppPublisher}
 DefaultDirName=New folder
 LicenseFile=../LICENSE
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
@@ -63,17 +63,20 @@ Name: "{app}\GrinchTrainerVC"; Check: IsVC; Permissions: users-modify
 Name: "{app}\GrinchTrainerIII"; Check: IsIII; Permissions: users-modify
 
 [Files]
-Source: "{tmp}\vorbisFile.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: IsSA; AfterInstall: Extract('{app}\vorbisFile.zip', 'vorbisFile.dll', '{app}');  Components: plugins/asiloader;
-Source: "{tmp}\d3d8.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: not IsSA; AfterInstall: Extract('{app}\d3d8.zip', 'd3d8.dll', '{app}'); Components: plugins/d3d8to9;
-Source: "{tmp}\SilentPatch.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; AfterInstall: ExtractAll('{app}\SilentPatch.zip', '{app}'); Components: plugins/SilentPatch;
-Source: "{tmp}\GrinchTrainer.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; AfterInstall: ExtractAll('{app}\GrinchTrainer.zip', '{app}'); Components: program;
-Source: "{tmp}\redist.exe"; DestDir: "{app}"; Flags: deleteafterinstall external; Components: plugins/redist;
-Source: "{tmp}\dx9.exe"; DestDir: "{app}"; Flags: deleteafterinstall external; Components: plugins/dx9;
-Source: "{tmp}\dinput8.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: not IsSA; AfterInstall: Extract('{app}\dinput8.zip', 'dinput8.dll', '{app}');  Components: plugins/asiloader;
+Source: "{#GrinchTrainerLocalFolder}\GrinchTrainerSA.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: IsSA; AfterInstall: ExtractAll('{app}\GrinchTrainerSA.zip', '{app}'); Components: program;
+Source: "{#GrinchTrainerLocalFolder}\GrinchTrainerVC.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: IsVC; AfterInstall: ExtractAll('{app}\GrinchTrainerVC.zip', '{app}'); Components: program;
+Source: "{#GrinchTrainerLocalFolder}\GrinchTrainerIII.zip"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: IsIII; AfterInstall: ExtractAll('{app}\GrinchTrainerIII.zip', '{app}'); Components: program;
+Source: "{#UAL32}"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: WizardIsComponentSelected('plugins/asiloader'); AfterInstall: Extract('{app}\UAL32', 'dinput8.dll', '{app}'); Components: plugins/asiloader;
+Source: "{#D3D8to9Wrapper}"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: WizardIsComponentSelected('plugins/d3d8to9'); AfterInstall: Extract('{app}\d3d8.zip', 'd3d8.dll', '{app}'); Components: plugins/d3d8to9;
+Source: "{#SilentPatchIII}"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: IsSA; AfterInstall: ExtractAll('{app}\SilentPatchIII.zip', '{app}'); Components: plugins/SilentPatch;
+Source: "{#SilentPatchVC}"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: IsVC; AfterInstall: ExtractAll('{app}\SilentPatchVC.zip', '{app}'); Components: plugins/SilentPatch;
+Source: "{#SilentPatchSA}"; DestDir: "{app}"; Flags: deleteafterinstall external; Check: IsSA; AfterInstall: ExtractAll('{app}\SilentPatchSA.zip', '{app}'); Components: plugins/SilentPatch;
+Source: "{#Redist}"; DestDir: "{app}"; Flags: deleteafterinstall external; Components: plugins/redist;
+Source: "{#DX9}"; DestDir: "{app}"; Flags: deleteafterinstall external; Components: plugins/dx9;
 
 [Run]
-Filename: "{tmp}\redist.exe"; StatusMsg: "Installing Visual C++ Redistributable 2022 x86"; Check: WizardIsComponentSelected('plugins/redist'); Parameters: "/quiet"; Flags: waituntilterminated
-Filename: "{tmp}\dx9.exe"; StatusMsg: "Installing DirectX End-User Runtime"; Check: WizardIsComponentSelected('plugins/dx9'); Flags: waituntilterminated
+Filename: "{#Redist}"; StatusMsg: "Installing Visual C++ Redistributable 2022 x86"; Check: WizardIsComponentSelected('plugins/redist'); Parameters: "/quiet"; Flags: waituntilterminated
+Filename: "{#DX9}"; StatusMsg: "Installing DirectX End-User Runtime"; Check: WizardIsComponentSelected('plugins/dx9'); Flags: waituntilterminated
 
 [InstallDelete]
 Name: "{app}\Scripts\Globals.ini"; Type: files
@@ -179,185 +182,64 @@ begin
     Result := GTA_VC;
     Exit;
   end;
-  if FileExists(Dir + '\gta_sa.exe') or FileExists(Dir + '\gta-sa.exe') or FileExists(Dir + '\gta_sa_compact.exe') then
+  if FileExists(Dir + '\gta_sa.exe') or FileExists(Dir + '\gta-sa.exe') or FileExists(Dir + '\GTA_SA.exe') then
   begin
     Result := GTA_SA;
     Exit;
-  end;  
-  Result := UNKNOWN; // unknown
+  end;
+  Result := UNKNOWN;
 end;
 
-function InformIncompatibleMods(Dir: String): Boolean;
-var
-  Size: Integer;
-
+procedure InitializeSetup();
 begin
-  if FileExists(Dir + '\enbseries.ini') then
-    MsgBox('GrinchTrainer may not work properly with ENB modifications', mbInformation, MB_OK);
-  
-  if GameId = GTA_III then
+  GameId := IdentifyGame(ExpandConstant('{pf}\Rockstar Games\Grand Theft Auto III'));
+  if GameId = UNKNOWN then
   begin
-    if FileSize(Dir + '\gta3.exe', Size) then
-    begin
-      if not Size = 2383872 then
-        MsgBox('Unknown game version. Only GTA3 v1.0 EN is supported', mbInformation, MB_OK);
-    end;
-  end;
-
-  if GameId = GTA_VC then
-  begin
-    if FileSize(Dir + '\gta-vc.exe', Size) then
-    begin
-      if Size <> 3088896 then
-      begin
-        MsgBox('Unknown game version. Only GTA VC v1.0 EN is supported', mbInformation, MB_OK);
-      end;
-    end;
-  end;
-
-  if GameId = GTA_SA then
-  begin
-    if FileSize(Dir + '\gta_sa.exe', Size) then
-    begin
-      if Size <> 14383616 then
-      begin
-        MsgBox('Unknown game version. Only GTA SA v1.0 US is supported', mbInformation, MB_OK);
-      end;
-    end;
-  end;
-    
-  Result := True; // unknown
-end;
-
-function IsUnknown: Boolean;
-begin
-  Result := (GameId = UNKNOWN);
-end;
-
-function OnDownloadProgress(const Url, FileName: String; const Progress, ProgressMax: Int64): Boolean;
-begin
-  if Progress = ProgressMax then
-    Log(Format('Successfully downloaded file to {tmp}: %s', [FileName]));
-  Result := True;
-end;  
-
-procedure InitializeWizard;
-var
-  WinHttpReq: Variant;
-begin
-  DownloadPage := CreateDownloadPage(SetupMessage(msgWizardPreparing), SetupMessage(msgPreparingDesc), @OnDownloadProgress);
-
-  // Check for active connection
-  try
-    WinHttpReq := CreateOleObject('WinHttp.WinHttpRequest.5.1');
-    WinHttpReq.Open('GET', 'https://github.com/', False);
-    WinHttpReq.Send('');
-  except
-    SuppressibleMsgBox('Cannot reach server. Please check your Internet connection.',
-              mbError, MB_OK, IDOK);
-    Abort;
-  end;
-end;
-   
-procedure CurPageChanged(CurPageID: Integer);
-var
-  I: Integer;
-begin
-  if CurPageID = wpSelectDir then 
-  begin
-    // delete \New Folder from the path
-    if (DefaultDirOnce) then Exit;
-    WizardForm.DirEdit.Text := ExpandConstant('{src}');
-    DefaultDirOnce := True;
-  end;
-
-  if CurPageID = wpWelcome then 
-  begin
-    WizardForm.DirEdit.Text := 'thisi s a aasdjadljsalkdkll';
-  end;
-
-  if CurPageID = wpSelectComponents then
-  begin
-    GameId := IdentifyGame(WizardDirValue);
-    InformIncompatibleMods(WizardDirValue);
-      // reset all checkboxes to their initial state first
-    for I := 1 to 4 do
-    begin
-      WizardForm.ComponentsList.ItemEnabled[I] := True;
-      WizardForm.ComponentsList.Checked[I] := True;
-    end;
-  end;
-end;
-
-function NextButtonClick(CurPageID: Integer): Boolean;
-begin
-  Result := True;
- 
-  if (CurPageID = wpSelectDir) and (WizardDirValue <> '') then
-  begin
-    GameId := IdentifyGame(WizardDirValue);
-  end;
-
-  if CurPageID = wpReady then 
-  begin
-    if (GameId = UNKNOWN) then
-      GameId := IdentifyGame(WizardDirValue);
-
-    DownloadPage.Clear;
-
-    if GameId = GTA_III then
-      DownloadPage.Add('{#GrinchTrainer}/{#AppVersion}/GrinchTrainerIII.zip', 'GrinchTrainer.zip', '');
-    if GameId = GTA_VC then
-      DownloadPage.Add('{#GrinchTrainer}/{#AppVersion}/GrinchTrainerVC.zip', 'GrinchTrainer.zip', '');
-    if GameId = GTA_SA then
-      DownloadPage.Add('{#GrinchTrainer}/{#AppVersion}/GrinchTrainerSA.zip', 'GrinchTrainer.zip', '');
+    DownloadPage := CreateInputOptionPage(wpSelectDir,
+      'Game Version Selection',
+      'Please select your game version',
+      'Select the version of GTA that you are installing the trainer for:',
+      False, True);
       
-    if WizardIsComponentSelected('plugins/asiloader') then
-    begin
-      if GameId = GTA_SA then
-        DownloadPage.Add('{#UAL32}/vorbisFile.zip', 'vorbisFile.zip', '')
-      else
-        DownloadPage.Add('{#UAL32}/dinput8.zip', 'dinput8.zip', '');
-    end;
-
-    if WizardIsComponentSelected('plugins/d3d8to9') then
-      DownloadPage.Add('{#D3D8to9Wrapper}', 'd3d8.zip', '');
-
-    if (GameId <> UNKNOWN) and (WizardIsComponentSelected('plugins/SilentPatch')) then
-    begin
-      if GameId = GTA_III then
-        DownloadPage.Add('{#SilentPatchIII}', 'SilentPatch.zip', '');
-      if GameId = GTA_VC then
-        DownloadPage.Add('{#SilentPatchVC}', 'SilentPatch.zip', '');
-      if GameId = GTA_SA then
-        DownloadPage.Add('{#SilentPatchSA}', 'SilentPatch.zip', '');
-    end;
-
-    if WizardIsComponentSelected('plugins/redist') then
-      DownloadPage.Add('{#Redist}', 'redist.exe', '');
-
-    if WizardIsComponentSelected('plugins/dx9') then
-      DownloadPage.Add('{#DX9}', 'dx9.exe', '');
-
-    DownloadPage.Show;
-    try
-      try
-        DownloadPage.Download; // This downloads the files to {tmp}
-        Result := True;
-      except
-        if DownloadPage.AbortedByUser then
-          Log('Aborted by user.')
-        else
-          SuppressibleMsgBox(AddPeriod(GetExceptionMessage), mbCriticalError, MB_OK, IDOK);
-        Result := False;
-      end;
-    finally
-      DownloadPage.Hide;
-    end;
-  end 
-    else
-      Result := True;
+    DownloadPage.Add('GTA III');
+    DownloadPage.Add('GTA VC');
+    DownloadPage.Add('GTA SA');
+    DownloadPage.OnChange := @OnDownloadPageChange;
+  end;
 end;
 
+procedure OnDownloadPageChange(Sender: TObject);
+begin
+  if DownloadPage.SelectedValue = 'GTA III' then
+    GameId := GTA_III
+  else if DownloadPage.SelectedValue = 'GTA VC' then
+    GameId := GTA_VC
+  else if DownloadPage.SelectedValue = 'GTA SA' then
+    GameId := GTA_SA;
 
+  if GameId <> UNKNOWN then
+    DownloadPage.Visible := False;
+end;
 
+procedure CurStepChanged(CurStep: TSetupStep);
+begin
+  if CurStep = ssInstall then
+  begin
+    if GameId = UNKNOWN then
+      MsgBox('Could not find a compatible game installation. Please check the selected game directory.', mbError, MB_OK);
+    
+    if IsSA then
+    begin
+      ExtractAll(ExpandConstant('{app}\GrinchTrainerSA.zip'), ExpandConstant('{app}'));
+    end
+    else if IsVC then
+    begin
+      ExtractAll(ExpandConstant('{app}\GrinchTrainerVC.zip'), ExpandConstant('{app}'));
+    end
+    else if IsIII then
+    begin
+      ExtractAll(ExpandConstant('{app}\GrinchTrainerIII.zip'), ExpandConstant('{app}'));
+    end;
+    
+  end;
+end;

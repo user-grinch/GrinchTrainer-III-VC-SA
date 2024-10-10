@@ -154,6 +154,35 @@ If you have those mentioned versions installed, use the installer [here](https:/
 
 Check out the [Compatibility List](https://docs.google.com/document/d/1BrDlFQ_w25AOx8mMJe0PQkuOpJL4LezXMS6TlUpS5XU/edit?usp=sharing)
 
+## Images
+<details>
+  <summary>Show Images</summary>
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(1).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(2).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(3).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(4).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(5).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(6).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(7).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(8).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(9).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(10).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(11).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(12).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(13).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(14).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(15).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(16).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(17).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(18).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(19).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(20).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(21).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(22).png">
+  <img src="https://raw.githubusercontent.com/user-grinch/GrinchTrainer-III-VC-SA/master/images/screen%20(23).png">
+</details>
+
+
 ## Things to do on crash
 1. Delete the `GrinchTrainerXX.toml` config file and try again.
 2. If it's happening after installing a recent mod try removing it.

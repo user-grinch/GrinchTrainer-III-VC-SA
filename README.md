@@ -141,16 +141,11 @@ Only these versions of the game is supported. I highly recommand installing the 
 - GTA VC v1.0 EN
 - GTA III v1.0 EN
 
-If you have those mentioned versions installed, use the installer [here](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/raw/master/installer/Installer.exe).
-
-<details>
-  <summary>Manual ( Not recommanded, use the installer instead! )</summary>
-
+If you have those mentioned versions installed,
 1. Install [DirectX9](https://www.microsoft.com/en-us/download/details.aspx?id=35), [Visual C++ Redistributable 2022 x86](https://aka.ms/vs/17/release/vc_redist.x86.exe) & [Ultimate asi loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases).
 2. Download [**GrinchTrainerSA/VC/III.7z**](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/releases) and extract everything in game root directory (NOT MODLOADER). The **GrinchTrainer** folder & **.asi** file must be placed in the same place.
 3. Install [SilentPatch](https://gtaforums.com/topic/669045-silentpatch/) (For GTA III don't install the ddraw.dll component)
 4. Install [D3D8to9 wrapper](https://github.com/crosire/d3d8to9/releases) (For III & VC) 
-</details>
 
 Check out the [Compatibility List](https://docs.google.com/document/d/1BrDlFQ_w25AOx8mMJe0PQkuOpJL4LezXMS6TlUpS5XU/edit?usp=sharing)
 

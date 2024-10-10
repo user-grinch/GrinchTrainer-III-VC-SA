@@ -1,5 +1,4 @@
 # Grinch Trainer
-
 ## Introduction
 
 A trainer Grand Theft Auto III, VC & SA enabling a much more easier & amusing gameplay with cheats. This is **NOT** intended for use in multiplayer, I won't be responsible for any form of bans. Use it at your own risk!
@@ -134,6 +133,7 @@ Press <kbd>Left Ctrl</kbd> + <kbd>T</kbd> (on keyboard) or <kbd>GamePadFaceLeft<
 Get stable binaries from [here](https://github.com/user-grinch/GrinchTrainer-III-VC-SA/releases). Beta binaries are available at the discord server.
 
 [![Discord Banner 2](https://discordapp.com/api/guilds/689515979847237649/widget.png?style=banner2)](https://discord.gg/AduJVdyqCD)
+[![375333774-f8adb118-0c50-4ce7-91c0-981cd366e6d6](https://github.com/user-attachments/assets/e6aa195c-e93a-41a9-8b14-2788bed2d7d1)](https://www.patreon.com/grinch_)
 
 ## Installation
 Only these versions of the game is supported. I highly recommand installing the menu on a fresh, non-modded game first.
